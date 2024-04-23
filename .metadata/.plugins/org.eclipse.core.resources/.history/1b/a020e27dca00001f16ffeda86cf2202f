@@ -1,0 +1,45 @@
+package com.soumaya.chaussures.service;
+
+import java.util.List;
+
+import com.soumaya.chaussures.entities.Chaussure;
+
+public class ChaussureServiceImpl implements ChaussureService {
+
+	@Override
+	public Chaussure saveProduit(Chaussure c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Chaussure updateProduit(Chaussure c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteChaussure(Chaussure c) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteChaussureById(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Chaussure getChaussure(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Chaussure> getAllProduits() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

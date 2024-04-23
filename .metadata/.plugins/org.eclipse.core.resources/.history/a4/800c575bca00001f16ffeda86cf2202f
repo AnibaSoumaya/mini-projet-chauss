@@ -1,0 +1,15 @@
+package com.soumaya.chaussures.service;
+
+import java.util.List;
+
+import com.soumaya.chaussures.entities.Chaussure;
+
+public interface ChaussureService {
+
+	Chaussure saveProduit(Chaussure c);
+	Chaussure updateProduit(Chaussure c);
+	void deleteChaussure(Chaussure c);
+	void deleteChaussureById(Long id);
+	Chaussure getChaussure(Long id);
+	List<Chaussure> getAllProduits();
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css"
+href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+<head>
+<meta charset="utf-8">
+<title>Liste des Chaussures</title>
+</head>
+<body>
+<div class="container mt-5">
+<div class="card">
+<div class="card-header">
+Liste des Chaussures
+</div>
+<div class="card-body">
+<table class="table table-striped">
+<tr>
+<th>ID</th><th>Nom Chaussure</th><th>Prix</th>
+</tr>
+<tr th:each="c:${chaussures.content}">
+<td th:text="${c.idChaussure}"></td>
+<td th:text="${c.nomChaussure}"></td>
+<td th:text="${c.prixChaussure}"></td>
+<td><a class="btn btn-danger" th:href="@{supprimerChaussure(id=${c.idChaussure},
+page=${currentPage},size=${size})}">Supprimer</a></td>
+</tr>
+</table>
+<ul class="nav nav-pills">
+<li th:each="page,status:${pages}">
+<a th:class="${status.index==currentPage?'btn btn-primary':'btn' }"
+th:href="@{ ListeChaussures(page=${status.index}, size=${size} ) }"
+th:text="${status.index }"></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+package com.soumaya.chaussures;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import java.util.Date;
+import com.soumaya.chaussures.entities.Chaussure;
+import com.soumaya.chaussures.repos.ChaussureRepository;
+
+@SpringBootTest
+class ChuassuresApplicationTests {
+
+	@Autowired
+	private ChaussureRepository chaussureRepository;
+	@Test
+	public void testCreateChaussure() {
+		Chaussure chauss = new Chaussure("Addidas",290.500,new Date());
+		chaussureRepository.save(chauss);
+	}
+}

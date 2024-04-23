@@ -1,0 +1,7 @@
+package com.soumaya.chaussures.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ChaussureRepository extends JpaRepository<T, ID> {
+
+}

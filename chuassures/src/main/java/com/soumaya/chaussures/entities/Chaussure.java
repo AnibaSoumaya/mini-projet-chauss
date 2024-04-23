@@ -1,0 +1,56 @@
+package com.soumaya.chaussures.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import java.util.Date;
+
+@Entity
+public class Chaussure {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idChaussure;
+	private String nomChaussure;
+	private Double prixChaussure;
+	private Date dateCreation;
+	
+	public Chaussure() {
+	super();
+	}
+	public Chaussure(String nomChaussure, Double prixChaussure, Date dateCreation) {
+	super();
+	this.nomChaussure = nomChaussure;
+	this.prixChaussure = prixChaussure;
+	this.dateCreation = dateCreation;
+	}
+	public Long getIdChaussure() {
+		return idChaussure;
+	}
+	public void setIdChaussure(Long idChaussure) {
+		this.idChaussure = idChaussure;
+	}
+	public String getNomChaussure() {
+		return nomChaussure;
+	}
+	public void setNomChaussure(String nomChaussure) {
+		this.nomChaussure = nomChaussure;
+	}
+	public Double getPrixChaussure() {
+		return prixChaussure;
+	}
+	public void setPrixChaussure(Double prixChaussure) {
+		this.prixChaussure = prixChaussure;
+	}
+	public Date getDateCreation() {
+		return dateCreation;
+	}
+	public void setDateCreation(Date dateCreation) {
+		this.dateCreation = dateCreation;
+	}
+	@Override
+	public String toString() {
+		return "Chaussure [idChaussure=" + idChaussure + ", nomChaussure=" + nomChaussure + ", prixChaussure="
+				+ prixChaussure + ", dateCreation=" + dateCreation + "]";
+	}
+}

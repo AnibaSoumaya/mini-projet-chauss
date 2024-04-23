@@ -1,0 +1,5 @@
+package com.soumaya.chaussures.service;
+
+public interface ChaussureService {
+
+}

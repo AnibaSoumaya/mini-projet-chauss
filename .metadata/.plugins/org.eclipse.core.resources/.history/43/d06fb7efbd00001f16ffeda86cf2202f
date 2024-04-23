@@ -1,0 +1,5 @@
+package com.soumaya.chaussures.entities;
+
+public class Chaussure {
+
+}

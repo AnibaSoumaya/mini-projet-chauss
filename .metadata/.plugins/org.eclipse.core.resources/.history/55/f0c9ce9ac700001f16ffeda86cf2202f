@@ -1,0 +1,50 @@
+package com.soumaya.chaussures;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import java.util.Date;
+import java.util.List;
+
+import com.soumaya.chaussures.entities.Chaussure;
+import com.soumaya.chaussures.repos.ChaussureRepository;
+
+@SpringBootTest
+class ChuassuresApplicationTests {
+
+	@Autowired
+	private ChaussureRepository chaussureRepository;
+	@Test
+	public void testCreateChaussure() {
+		Chaussure chauss = new Chaussure("nike",290.500,new Date());
+		chaussureRepository.save(chauss);
+	}
+	
+	@Test
+	public void testFindChaussure()
+	{
+		Chaussure c = chaussureRepository.findById(1L).get();
+	System.out.println(c);
+	}
+	@Test
+	public void testUpdateChaussure()
+	{
+		Chaussure c = chaussureRepository.findById(1L).get();
+		c.setPrixChaussure(300.9);
+	chaussureRepository.save(c);
+	}
+	@Test
+	public void testDeleteChaussure()
+	{
+		chaussureRepository.deleteById(1L);;
+	}
+	@Test
+	public void testListerTousChaussures()
+	{
+	List<Chaussure> chausss = chaussureRepository.findAll();
+	for (Chaussure c : chausss)
+	{
+	System.out.println(c);
+	}
+	}
+}

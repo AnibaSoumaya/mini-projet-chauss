@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ChuassuresApplicationTests.testFindByNomChaussureContains" project="chuassures" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.soumaya.chaussures.ChuassuresApplicationTests" time="1.141" displayname="ChuassuresApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.soumaya.chaussures.ChuassuresApplicationTests]">
+    <testcase name="testFindByNomChaussureContains" classname="com.soumaya.chaussures.ChuassuresApplicationTests" time="1.141" displayname="testFindByNomChaussureContains()" uniqueid="[engine:junit-jupiter]/[class:com.soumaya.chaussures.ChuassuresApplicationTests]/[method:testFindByNomChaussureContains()]"/>
+  </testsuite>
+</testrun>
